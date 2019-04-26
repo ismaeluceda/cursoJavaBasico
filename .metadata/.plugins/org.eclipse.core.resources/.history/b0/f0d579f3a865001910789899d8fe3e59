@@ -1,0 +1,12 @@
+package main;
+
+import javabeans.Persona;
+
+public class JBMain {
+
+	public static void main(String[] args) {
+		Persona p = new Persona("Luka", 48, 70.8);
+
+	}
+
+}

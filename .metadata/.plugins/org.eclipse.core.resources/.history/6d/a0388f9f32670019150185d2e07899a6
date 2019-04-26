@@ -1,0 +1,17 @@
+package modelo.persistencia;
+
+import java.util.ArrayList;
+
+import modelo.entidades.Usuario;
+
+/**
+ * Se encarga del acceso a los objetos de negocio DAO
+ * Simulamos una bbdd
+ * @author pue
+ *
+ */
+public class DaoUsuario {
+
+	private ArrayList<Usuario> listaUsuarios;
+	
+}

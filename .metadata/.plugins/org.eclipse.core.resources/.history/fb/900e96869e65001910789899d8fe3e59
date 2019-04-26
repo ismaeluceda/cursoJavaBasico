@@ -1,0 +1,59 @@
+package main;
+
+import entidades.Persona;
+
+public class MainPOO {
+
+	public static void main(String[] args) {
+		Persona p1 = new Persona();
+		p1.nombre = "Ismael";
+		p1.edad = 44;
+		p1.peso = 78;
+		
+		Persona p2 = new Persona();
+		p2.nombre = "Rocio";
+		p2.edad = 43;
+		p2.peso = 55;
+		
+		p1.andar(10);
+		//p1.metros = 45 - metros es private
+		p1.getMetros();
+		
+		Persona p3 = p2; //con esto apuntamos al mismo objeto donde apunte p2
+		p2.andar(12);
+		System.out.println(p3.getMetros());
+		
+		cambiarEdad(p1);
+		System.out.println(p1.edad); //imprime 66, se ha pasado una referencia
+		
+		int numero = 5;
+		cambiarNumero (numero);
+		System.out.println(numero); //imprime 5, se ha pasado un primitivo
+		
+		crearPersona(); //este metodo no hace nada
+		Persona p5 = crearPersonaX();//este si 
+		
+		//uso de constructores
+		Persona p6 = new Persona("Juan", 10, 45);
+	}
+	public static void cambiarEdad (Persona p) {
+		p.edad = 66;//esta variable muere al finalizar el metodo pero ha actualizado el objeto al que hace referencia, el cambio no se pierde
+	}
+
+	public static void cambiarNumero (int numero) {
+		numero = 10; //esta variable muere al finalizar el metodo, no actualiza nada
+	}
+	
+	public static void crearPersona() {
+		Persona p = new Persona();
+		p.edad = 33;
+		//trabajamos con la persona...
+		//al finalizar el metodo muere el objeto, no tiene mas referencias
+	}
+	
+	public static Persona crearPersonaX() {
+		Persona p = new Persona();
+		p.edad = 34;
+		return p;
+	}
+}

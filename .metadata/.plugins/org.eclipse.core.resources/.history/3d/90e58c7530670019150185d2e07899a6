@@ -1,0 +1,14 @@
+package modelo.negocio;
+
+import modelo.entidades.Usuario;
+
+//capa de logica de negocio de la aplicacion
+public class GestorUsuario {
+		
+	public boolean validarUsuario(Usuario user) {
+		return false;
+		//esta capa es la que se comunica con la bbdd
+	}
+		
+	
+}

@@ -1,0 +1,45 @@
+package entidades;
+
+public class Coche implements Movible{
+	private String matricula;
+	private String Marca;
+	
+	@Override
+	public String toString() {
+		return "Coche [matricula=" + matricula + ", Marca=" + Marca + "]";
+	}
+	public String getMatricula() {
+		return matricula;
+	}
+	public void setMatricula(String matricula) {
+		this.matricula = matricula;
+	}
+	public String getMarca() {
+		return Marca;
+	}
+	public void setMarca(String marca) {
+		Marca = marca;
+	}
+	
+	@Override
+	public void moverseLento() {
+		// TODO Auto-generated method stub
+		System.out.println("Soy el coche" + matricula + " y me muevo 1 metro");
+		posicion +=1;
+		
+	}
+	@Override
+	public void moverseRapido() {
+		// TODO Auto-generated method stub
+		System.out.println("Soy el coche" + matricula + " y me muevo 10 metro");
+		posicion +=10;
+	}
+	@Override
+	public int moverse(int metros) {
+		// TODO Auto-generated method stub
+		System.out.println("Soy el coche" + matricula + " y me muevo " + metros + " metros");
+		posicion +=10;
+		return posicion;
+	}
+
+}

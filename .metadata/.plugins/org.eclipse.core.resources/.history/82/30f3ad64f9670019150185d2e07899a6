@@ -1,0 +1,22 @@
+package ejemplo1;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Main1 {
+
+	public static void main(String[] args) {
+		// Manera clasica, Spring no esta llevando el control del objeto
+		Persona p = new Persona();
+		p.setNombre("Pepe");
+		p.setEdad(20);
+		p.setPeso(100);
+		
+		//uso de beans configurados en xml
+		//arrancamos nuestro contenedor de objetos de spring
+		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+		Persona lisa = context.getBean("pepito", Persona.class); //metodo sobrecargado, le indicamos el objeto y la clase a la que lo queremos castear
+		
+	}
+
+}

@@ -1,0 +1,13 @@
+package ejemplo2;
+
+public abstract class Arma {
+
+	private String tipo;
+	
+	public abstract void usar(); 
+	
+	public Arma() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

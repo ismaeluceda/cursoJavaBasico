@@ -1,0 +1,15 @@
+package Entidades;
+
+public class Trabajador extends Empleado {
+
+	public Trabajador() {
+		// constructor por defecto
+	}
+
+	@Override
+	public double calcularSueldo() {
+		// El sueldo en este caso coincide con la nomina
+		return getNomina();
+	}
+
+}

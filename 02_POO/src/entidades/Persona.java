@@ -1,0 +1,41 @@
+package entidades;
+
+public class Persona {
+	//las dos visibilidades mas importantes son public y private, tanto para atributos como metodos
+	//public - se puede acceder desde cualquier clase
+	//private - solo desde la propia clase
+	public String nombre;
+	public int edad;
+	public double peso;
+	private int metros;
+	//los atributos se inicializan a null si son referencias, y a 0 si son primitivos, y a false si son booleanos
+	public Direccion direccion;
+	
+	//Todos los metodos deben tener un constructor por defecto
+	public Persona() {
+		
+	}
+	
+	//Constructor generado auto con el editor Source ->
+	/**
+	 * @param nombre
+	 * @param edad
+	 * @param peso
+	 */
+	public Persona(String nombre, int edad, double peso) {
+		super();
+		this.nombre = nombre;
+		this.edad = edad;
+		this.peso = peso;
+	}
+
+	public void andar(int metros) {
+		//con this hacemos referencia al propio objeto
+		this.metros += metros;
+	}
+	
+	public int getMetros() {
+		return metros; //no hace falta this, no hay confusin con parametros del metodo
+	}
+	
+}

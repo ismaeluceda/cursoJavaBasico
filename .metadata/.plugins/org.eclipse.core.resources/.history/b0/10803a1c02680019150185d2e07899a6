@@ -1,0 +1,9 @@
+package ejemplo2;
+
+public class Guerrero {
+
+	public Guerrero() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

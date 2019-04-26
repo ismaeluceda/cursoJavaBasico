@@ -1,0 +1,17 @@
+package ejemplo2;
+
+public class mainBatalla {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Guerrero guerrero = new Guerrero();
+		guerrero.setNombre("Aquiles");
+		Espada espada = new Espada();
+		espada.setTipo("larga");
+		//inyectar la dependencia
+		guerrero.setArma(espada);
+		guerrero.atacar();
+
+	}
+
+}

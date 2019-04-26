@@ -1,0 +1,12 @@
+package entidades;
+
+/**
+ * Hace que los objetos se puedan mover. Cada objeto se movera como corresponda 
+ * @author Ismael
+ * @version 1.0
+ * @since 24/04/2019
+ *
+ */
+public interface Movible {
+
+}

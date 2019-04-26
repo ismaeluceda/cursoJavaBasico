@@ -1,0 +1,15 @@
+package main;
+
+import entidades.Persona;
+
+public class MainPOO {
+
+	public static void main(String[] args) {
+		Persona persona = new Persona();
+		persona.nombre = "Ismael";
+		persona.edad = 44;
+		persona.peso = 78;
+
+	}
+
+}

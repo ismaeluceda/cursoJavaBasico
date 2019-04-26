@@ -1,0 +1,49 @@
+package main;
+
+import java.util.ArrayList;
+
+import entidades.Director;
+import entidades.Empleado;
+import entidades.Jefe;
+import entidades.Programador;
+
+public class MainHerencia {
+
+	public static void main(String[] args) {
+		Empleado emp1 = new Programador();
+		emp1.setDni("12345678A");
+		emp1.setNombre("Paco");
+		emp1.setNomina(1000);
+		
+		Jefe jefe1 = new Jefe();
+		jefe1.setDni("87654321Z");
+		jefe1.setNombre("Curro");
+		jefe1.setNomina(1600);
+		jefe1.setIncentivos(300);
+		
+		Director dir1 = new Director();
+		dir1.setDni("54545454G");
+		dir1.setNombre("Harry");
+		dir1.setNomina(2300);
+		ArrayList<Empleado> listaEmps = new ArrayList<>();
+		listaEmps.add(emp1);
+		listaEmps.add(jefe1);
+		dir1.setListaEmpleados(listaEmps);
+		
+		ArrayList<Empleado> empresa = new ArrayList<>();
+		empresa.add(emp1);
+		empresa.add(jefe1);
+		empresa.add(dir1);	
+		
+		calcularSueldo(empresa);
+		
+	}
+	
+	public static void calcularSueldo(ArrayList<Empleado> empresa) {
+		//calcular el sueldo de todos los empleados
+		for(Empleado e : empresa) {
+			System.out.println(e.getNombre() + "-" + e.getClass().getName() + " - " + e.calcularSueldo());
+		}
+	}
+
+}

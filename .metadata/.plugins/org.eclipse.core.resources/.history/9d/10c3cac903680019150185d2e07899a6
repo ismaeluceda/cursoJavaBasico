@@ -1,0 +1,9 @@
+package ejemplo2;
+
+public class Arma {
+
+	public Arma() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

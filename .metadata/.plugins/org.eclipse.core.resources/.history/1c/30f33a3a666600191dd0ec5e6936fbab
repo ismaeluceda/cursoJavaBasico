@@ -1,0 +1,10 @@
+package entidades;
+
+/**
+ * Hace que los objetos se puedan mover. Cada objeto se movera como corresponda
+ * @author pue
+ *
+ */
+public interface Movible {
+
+}

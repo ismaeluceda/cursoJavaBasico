@@ -1,0 +1,9 @@
+package ejemplo2;
+
+public class Espada {
+
+	public Espada() {
+		// TODO Auto-generated constructor stub
+	}
+
+}
